@@ -25,7 +25,11 @@ class AndroidSettingsSection extends StatelessWidget {
     final tileList = buildTileList();
 
     if (title == null) {
-      return tileList;
+      return Container(
+        margin: margin,
+        color: theme.themeData.settingsSectionBackground,
+        child: tileList,
+      );
     }
 
     return Column(
